@@ -15,13 +15,13 @@ mkdir -p "$(dirname "$REPORT_FILE")"
 
 echo "select log file to analyze:"
 echo "1) Heart Rate (heart_rate.log)"
-echo "2) Temperature (tempearature.log)"
+echo "2) Temperature (temperature.log)"
 echo "3) Water usage (water_usage.log)"
 #get user input on the log file
 
 read -p "Enter your choice (1-3): " choice                                  
 case "$choice" in
-                                                                                1) selected_log="$HEART_LOG"
+    1) selected_log="$HEART_LOG"
        log_name="Heart rate"
        break
        ;;
@@ -36,7 +36,7 @@ case "$choice" in
        break
        ;;                 
     
-    *) echo "Invalid choice: Please enter 1, 2 or 3."
+    *) echo "Invalid choice: Please enter 1, 2, or 3."
        exit 1
 
 esac
